@@ -1,0 +1,12 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Account verification
+From: django@geekshop.local
+To: test3@gb.local
+Date: Fri, 25 Jun 2021 16:40:54 -0000
+Message-ID: <162463925403.7284.13989082030095829887@ColdyRide>
+
+Yor link for account verification:
+ http://localhost:8000/auth/vefify/test3@gb.local/1fb92017321da1030f2a83648fc28de7b9d74be6
+-------------------------------------------------------------------------------

@@ -1,0 +1,49 @@
+{% extends 'adminapp/base.html' %}
+{% load static %}
+{% block main_content %}
+    <table class="table table-bordered table-hover caption-top align-middle text-center">
+        <caption>
+            <a href="{% url 'admin_staff:category_create' %}"
+               class="btn btn-primary">Добавить категорию</a>
+        </caption>
+        <thead class="table-dark">
+        <tr>
+            <th scope="col">Категория</th>
+            <th scope="col">Активный</th>
+            <th scope="col">Опции</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for category in categories %}
+            <tr {% if not category.is_active %}style="opacity: 0.5"{% endif %}>
+                <th scope="row">
+                    <a href="{% url 'admin_staff:category_update' category.id %}"
+                       class="link-info">{{ category.name }}</a></th>
+                <td>
+                    {% if category.is_active %}
+                        <i class="fa fa-check-circle"></i>
+                    {% else %}
+                        <i class="fa fa-times-circle"></i>
+                    {% endif %}
+                </td>
+                <td>
+                    <div class="d-flex justify-content-around">
+                        <form action="{% url 'admin_staff:products' category.id %}" method="GET">
+                            {% csrf_token %}
+                            <button class="btn btn-outline-primary">Продукты</button>
+                        </form>
+                        <form action="{% url 'admin_staff:category_delete' category.id %}" method="POST">
+                            {% csrf_token %}
+                            {% if category.is_active %}
+                                <button class="btn btn-outline-danger">Удалить</button>
+                            {% else %}
+                                <button class="btn btn-outline-danger disabled">Удалить</button>
+                            {% endif %}
+                        </form>
+                    </div>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

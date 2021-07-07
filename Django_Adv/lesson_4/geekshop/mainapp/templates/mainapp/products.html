@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block menu %}
+        {% include 'includes/inc_main_links.html' %}
+{% endblock %}
+{% block content %}
+    <div class="details">
+        <div class="links clearfix">
+            {% include 'mainapp/includes/inc_proguct_cat.html' %}
+        </div>
+        {% include 'mainapp/includes/inc_product.html' %}
+        {% if not request.resolver_match.url_name == 'details' %}
+            {% include 'mainapp/includes/inc_related_products.html' %}
+        {% endif %}
+    </div>
+{% endblock %}

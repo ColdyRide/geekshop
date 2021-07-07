@@ -1,0 +1,26 @@
+{% extends 'authapp/base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <div class="col-4 mx-auto">
+        <div class="row justify-content-center">
+
+                <img src="{% if user.shopuserprofile.photo %}
+                            {{ user.shopuserprofile.photo }}
+                          {% else %}
+                            /media/{{ user.avatar|default:'users_avatars/default_avatar.svg' }}
+                          {% endif %}" class="img-fluid rounded-circle">
+
+        </div>
+        <div class="row justify-content-center">
+            <form class="form-horizontal" action="{% url 'auth:edit' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ edit_form.as_p }}
+                {{ profile_form.as_p }}
+                <input class="form-control" type="submit" value="сохранить">
+            </form>
+            <button class="btn btn-round form-control last"></button>
+        </div>
+    </div>
+{% endblock %}

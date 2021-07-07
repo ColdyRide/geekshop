@@ -1,0 +1,21 @@
+{% extends 'authapp/base.html' %}
+{% load static %}
+{% block content %}
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        Activation result:
+                    </h5>
+                </div>
+                <div class="modal-body">
+                    <p>{% if user.is_authenticated %}
+                        Activation success!
+                    {% else %}
+                        Activation failed! Please contact support team!
+                    {% endif %}
+                    </p>
+                </div>
+            </div>
+        </div>
+{% endblock %}

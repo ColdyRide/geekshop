@@ -1,0 +1,24 @@
+{% extends 'adminapp/base.html' %}
+{% load static %}
+{% block main_content %}
+    <div class="col-5 mx-left">
+        <div class="row">
+            <form class="form-control" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input class="form-control bnt-primary" type="submit" value="сохранить">
+            </form>
+            <button class="btn btn-round form-control last">
+                {% if object.category.id %}
+                    <a href="{% url 'admin_staff:products' object.category.id %}">
+                        К списку продуктов
+                    </a>
+                {% else %}
+                    <a href="{% url 'admin_staff:products' view.kwargs.pk %}">
+                        К списку продуктов
+                    </a>
+                {% endif %}
+            </button>
+        </div>
+    </div>
+{% endblock %}

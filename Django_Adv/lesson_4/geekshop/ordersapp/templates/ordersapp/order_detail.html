@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load media_tags %}
+{% block menu %}
+    {% include 'includes/inc_main_links.html' %}
+{% endblock %}
+{% block content %}
+    {% include 'ordersapp/includes/inc_order_summary.html' %}
+    <div class="basket_list">
+        <div class="row" style="justify-content:center">
+            <div class="table-responsive">
+                <table class="table table-hover text-center">
+                    <thead class="table-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Фото</th>
+                        <th scope="col">Категория</th>
+                        <th scope="col">Имя</th>
+                        <th scope="col">Цена</th>
+                        <th scope="col">Qty</th>
+                        <th scope="col">Стоимость</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for item in object.orderitems.select_related %}
+                        <tr>
+                            <th class="align-middle" scope="row">{{ forloop.counter }}</th>
+                            <td style="width: 25%"><img src="{{ item.product.image|media_products }}"
+                                     alt="{{ item.product.short_desc }}" class="img-fluid" style="width: 50%"></td>
+                            <td class="align-middle">{{ item.product.category.name }}</td>
+                            <td class="align-middle">{{ item.product.name }}</td>
+                            <td class="align-middle">{{ item.product.price }}&nbspруб</td>
+                            <td class="align-middle">x {{ item.quantity }}</td>
+                            <td class="align-middle"> = {{ item.get_product_cost }}&nbspруб</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    {% include 'ordersapp/includes/inc_order_actions.html' %}
+
+{% endblock %}

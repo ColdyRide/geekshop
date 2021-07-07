@@ -1,0 +1,18 @@
+<div class="d-flex justify-content-evenly">
+    {% if request.resolver_match.url_name == 'order_update' or request.resolver_match.url_name ==  'order_create' %}
+        <button type="submit" value="сохранить" class="btn btn-primary last">Cохранить</button>
+    {% endif %}
+    {% if object.status == 'FM' %}
+        <a class="btn btn-warning" href="{% url 'ordersapp:order_forming_complete' object.pk %}">
+            Cовершить покупку
+        </a>
+        <a class="btn btn-danger"
+           href="{% url 'order:order_delete' object.pk %}">
+            Удалить
+        </a>
+    {% endif %}
+    <a class="btn btn-primary" href="{% url 'ordersapp:order_list' %}">
+        К списку заказов
+    </a>
+</div>
+<hr>

@@ -1,0 +1,32 @@
+{% load static %}
+<div class="details-products">
+    <div class="details-slider">
+        <div class="slider-product">
+            <img src="/media/{{ product.image|default:'img/default.jpg' }}" alt="img" style="width:100%">
+        </div>
+        <div class="slider-control">
+            {% for i in '123' %}
+                <div class="block">
+                    <a href="#"><img src="/media/{{ product.image|default:'img/default.jpg' }}" alt="{{ product.name }}" style="width:100%">
+                        <div class="text"></div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="description">
+        <h3 class="big-bold">{{ product.name }}</h3>
+        <h3 class="red">
+            {% if not request.resolver_match.url_name == 'details' %}
+                горячее предложение
+            {% endif %}
+        </h3>
+        <p class="price"> {{ product.price }} <span>руб</span></p>
+        <a href="{% url 'basket:add' product.id %}" class="red-button">
+            заказать <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </a>
+        <div class="description-text">
+            {{ product.desc }}
+        </div>
+    </div>
+</div>

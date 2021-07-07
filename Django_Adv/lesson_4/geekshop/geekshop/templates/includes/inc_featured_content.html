@@ -1,0 +1,22 @@
+{%  load static %}
+ <div class="featured">
+     <div class="featured-menu">
+         <a class="active" href="#">Популярные</a><a href="#">Новинки</a>
+     </div>
+     <a class="explore" href="{% url 'products:category' 1 %}">показать все <img src="{% static 'img/arrow.png' %}" alt="img"></a>
+     <div class="clearfix">
+     </div>
+     <div class="tab-content">
+         {% for product in products %}
+            <div class="block">
+                <a href="{% url 'products:details' product.id %}"><img src="/media/{{ product.image|default:'img/default.jpg' }}" alt="img">
+                    <div class="text">
+                        <img src="{% static 'img/icon-hover.png' %}" alt="img">
+                        <h4>{{ product.name }}</h4>
+                        <p>{{ product.short_desc }}</p>
+                    </div>
+                </a>
+            </div>
+         {% endfor %}
+     </div>
+ </div>

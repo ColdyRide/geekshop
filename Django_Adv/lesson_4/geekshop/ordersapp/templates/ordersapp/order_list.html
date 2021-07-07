@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block menu %}
+    {% include 'includes/inc_main_links.html' %}
+{% endblock %}
+{% block content %}
+    {% if object_list %}
+        <div class="row" style="justify-content:center">
+            <table class="table table-bordered table-hover text-center caption-top">
+                <caption class="h2">
+                    Ваши заказы,
+                    {% if user.first_name %}
+                        {{ user.first_name|title }}
+                    {% else %}
+                        Пользователь
+                    {% endif %}
+                </caption>
+                <thead class="table-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Создан</th>
+                    <th scope="col">Обновлен</th>
+                    <th scope="col">Статус</th>
+                    <th scope="col">Опции</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for item in object_list %}
+                    {% if item.is_active %}
+                        <tr>
+                            <th class="align-middle" scope="row">{{ item.pk }}</th>
+                            <td class="align-middle">{{ item.created|date:"d-m-Y H:i:s" }}</td>
+                            <td class="align-middle">{{ item.updated|date:"d-m-Y H:i:s" }}</td>
+                            <td class="align-middle">{{ item.get_status_display|capfirst }}</td>
+                            <td class="d-flex justify-content-around">
+                                <a href="{% url 'ordersapp:order_read' item.pk %}" class="btn btn-outline-primary">
+                                    Посмотреть
+                                </a>
+                                <a class="btn btn-outline-warning {% if item.status != 'FM' %} disabled {% endif %}"
+                                   href="{% url 'ordersapp:order_update' item.pk %}">
+                                    Редактировать
+                                </a>
+                                <a class="btn btn-outline-danger {% if item.status != 'FM' %} disabled {% endif %}"
+                                   href="{% url 'ordersapp:order_delete' item.pk %}">
+                                    Удалить
+                                </a>
+                            </td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% endif %}
+        <a class="btn btn-primary" href="{% url 'ordersapp:order_create' %}">
+            Новый
+        </a>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'adminapp/base.html' %}
+{% load static %}
+{% block main_content %}
+    <table class="table table-bordered table-hover caption-top text-center">
+        <caption>
+            <a href="{% url 'admin_staff:user_create'%}"
+                       class="btn btn-primary">Создать пользователя</a>
+        </caption>
+        <thead class="table-dark">
+        <tr>
+            <th scope="col">Логин</th>
+            <th scope="col">Имя</th>
+            <th scope="col">Фамилия</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Персонал сайта</th>
+            <th scope="col">Активный</th>
+            <th scope="col">Последний вход</th>
+            <th scope="col">Опции</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for user in users_list %}
+            <tr {% if not user.is_active %}style="opacity: 0.5"{% endif %}>
+                <th class="align-middle" scope="row">
+                    <a href="{% url 'admin_staff:user_update' user.id %}"
+                       class="link-info">{{ user.username }}</a></th>
+                <td class="align-middle">{{ user.first_name }}</td>
+                <td class="align-middle">{{ user.last_name }}</td>
+                <td class="align-middle">{{ user.email }}</td>
+                <td class="align-middle text-center">
+                    {% if user.is_staff %}
+                        <i class="fa fa-check-circle"></i>
+                    {% else %}
+                        <i class="fa fa-times-circle"></i>
+                    {% endif %}
+                </td>
+                <td class="align-middle">
+                    {% if user.is_active %}
+                        <i class="fa fa-check-circle"></i>
+                    {% else %}
+                        <i class="fa fa-times-circle"></i>
+                    {% endif %}
+                </td>
+                <td class="align-middle">{{ user.last_login }}</td>
+                <td class="align-middle">
+                    <form action="{% url 'admin_staff:user_delete' user.id %}" method="POST">
+                        {% csrf_token %}
+                        {% if user.is_active %}
+                        <button class="btn btn-outline-danger"> Удалить</button>
+                        {% else %}
+                        <button class="btn btn-outline-danger disabled"> Удалить</button>
+                        {% endif %}
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
