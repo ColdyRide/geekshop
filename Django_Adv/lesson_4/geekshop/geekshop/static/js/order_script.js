@@ -28,7 +28,7 @@ window.onload = function () {
 
     function orderSummaryUpdate() {
         getArray();
-        order_total_cost = price_arr.reduce((a, b) => a + b, 0)
+        order_total_cost = price_arr.reduce((acc, curval, index) => acc + curval*quantity_arr[index], 0)
         order_total_quantity = quantity_arr.reduce((a, b) => a + b, 0)
 
         $('.order_total_cost').html(order_total_cost.toFixed(2).toString().replace('.', ','));
