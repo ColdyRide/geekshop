@@ -1,26 +1,50 @@
 [
   {
-    "name": "все",
-    "is_active": true
+    "model": "mainapp.productcategories",
+    "pk": 1,
+    "fields": {
+      "name": "все",
+      "is_active": true
+    }
   },
   {
-    "name": "офис",
-    "is_active": true
+    "model": "mainapp.productcategories",
+    "pk": 2,
+    "fields": {
+      "name": "офис",
+      "is_active": true
+    }
   },
   {
-    "name": "дом",
-    "is_active": true
+    "model": "mainapp.productcategories",
+    "pk": 3,
+    "fields": {
+      "name": "дом",
+      "is_active": true
+    }
   },
   {
-    "name": "модерн",
-    "is_active": true
+    "model": "mainapp.productcategories",
+    "pk": 4,
+    "fields": {
+      "name": "модерн",
+      "is_active": true
+    }
   },
   {
-    "name": "классика",
-    "is_active": true
+    "model": "mainapp.productcategories",
+    "pk": 5,
+    "fields": {
+      "name": "классика",
+      "is_active": true
+    }
   },
   {
-    "name": "тестовая1",
-    "is_active": false
+    "model": "mainapp.productcategories",
+    "pk": 6,
+    "fields": {
+      "name": "тестовая1",
+      "is_active": false
+    }
   }
 ]
