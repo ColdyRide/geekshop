@@ -1,1 +1,0 @@
-# This's Django advanced course
