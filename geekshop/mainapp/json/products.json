@@ -60,7 +60,7 @@
     "is_active": true
   },
   {
-    "category": 7,
+    "category": 6,
     "name": "Тестовый",
     "short_desc": "Тестовое краткое",
     "desc": "Тестовое длинное",
@@ -70,7 +70,7 @@
     "is_active": true
   },
   {
-    "category": 7,
+    "category": 6,
     "name": "Тест2",
     "short_desc": "Тест кратко",
     "desc": "Тест полное",
