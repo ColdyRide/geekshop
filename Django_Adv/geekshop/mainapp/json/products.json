@@ -1,0 +1,90 @@
+[
+  {
+      "category": 3,
+      "name": "Отличная лампа",
+      "short_desc": "Освети свой путь",
+      "desc": "",
+      "price": "5000.00",
+      "quantity": 11,
+      "image": "img/product-1.jpg",
+      "is_active": true
+  },
+  {
+      "category": 4,
+      "name": "Стул повышенного качества",
+      "short_desc": "Не оторваться.",
+      "desc": "",
+      "price": "2400.00",
+      "quantity": 4,
+      "image": "img/product-2.jpg",
+      "is_active": true
+  },
+{
+      "category": 2,
+      "name": "Диван",
+      "short_desc": "Крутейший офисный диван",
+      "desc": "",
+      "price": "4500.50",
+      "quantity": 12,
+      "image": "img/product-3-sm.jpg",
+      "is_active": true
+
+  },
+  {
+
+      "category": 5,
+      "name": "Кожаный стул",
+      "short_desc": "Очень кожаный очень стул",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, exercitationem labore autem laborum! Repellat, atque.",
+      "price": "2600.00",
+      "quantity": 21,
+      "image": "img/product-21.jpg",
+      "is_active": true
+
+  },
+  {
+
+      "category": 4,
+      "name": "Подвесная лампа",
+      "short_desc": "Очень лампа",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, exercitationem labore autem laborum! Repellat, atque.",
+      "price": "2854.00",
+      "quantity": 26,
+      "image": "img/product-11.jpg",
+      "is_active": true
+
+  },
+  {
+      "category": 3,
+      "name": "Настольная лампа",
+      "short_desc": "Очень яркая",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, exercitationem labore autem laborum! Repellat, atque.",
+      "price": "4500.00",
+      "quantity": 4,
+      "image": "img/product-31.jpg",
+      "is_active": true
+
+  },
+  {
+      "category": 7,
+      "name": "Тестовый",
+      "short_desc": "Тестовое краткое",
+      "desc": "Тестовое длинное",
+      "price": "0.00",
+      "quantity": 0,
+      "image": "",
+      "is_active": true
+
+  },
+  {
+      "category": 7,
+      "name": "Тест2",
+      "short_desc": "Тест кратко",
+      "desc": "Тест полное",
+      "price": "400.00",
+      "quantity": 5,
+      "image": "",
+      "is_active": true
+
+  }
+]

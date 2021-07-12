@@ -1,0 +1,32 @@
+[
+  {
+      "name": "все",
+      "is_active": true
+
+  },
+  {
+      "name": "офис",
+      "is_active": true
+
+  },
+  {
+      "name": "дом",
+      "is_active": true
+
+  },
+  {
+      "name": "модерн",
+      "is_active": true
+
+  },
+  {
+      "name": "классика",
+      "is_active": true
+
+  },
+  {
+      "name": "тестовая1",
+      "is_active": false
+
+  }
+]

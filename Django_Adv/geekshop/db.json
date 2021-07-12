@@ -1,0 +1,668 @@
+[
+  {
+      "category": 3,
+      "name": "Отличная лампа",
+      "short_desc": "Освети свой путь",
+      "desc": "",
+      "price": "5000.00",
+      "quantity": 11,
+      "image": "img/product-1.jpg",
+      "is_active": true
+  },
+  {
+      "category": 4,
+      "name": "Стул повышенного качества",
+      "short_desc": "Не оторваться.",
+      "desc": "",
+      "price": "2400.00",
+      "quantity": 4,
+      "image": "img/product-2.jpg",
+      "is_active": true
+  },
+{
+      "category": 2,
+      "name": "Диван",
+      "short_desc": "Крутейший офисный диван",
+      "desc": "",
+      "price": "4500.50",
+      "quantity": 12,
+      "image": "img/product-3-sm.jpg",
+      "is_active": true
+
+  },
+  {
+
+      "category": 5,
+      "name": "Кожаный стул",
+      "short_desc": "Очень кожаный очень стул",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, exercitationem labore autem laborum! Repellat, atque.",
+      "price": "2600.00",
+      "quantity": 21,
+      "image": "img/product-21.jpg",
+      "is_active": true
+
+  },
+  {
+
+      "category": 4,
+      "name": "Подвесная лампа",
+      "short_desc": "Очень лампа",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, exercitationem labore autem laborum! Repellat, atque.",
+      "price": "2854.00",
+      "quantity": 26,
+      "image": "img/product-11.jpg",
+      "is_active": true
+
+  },
+  {
+      "category": 3,
+      "name": "Настольная лампа",
+      "short_desc": "Очень яркая",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, exercitationem labore autem laborum! Repellat, atque.",
+      "price": "4500.00",
+      "quantity": 4,
+      "image": "img/product-31.jpg",
+      "is_active": true
+
+  },
+  {
+      "category": 7,
+      "name": "Тестовый",
+      "short_desc": "Тестовое краткое",
+      "desc": "Тестовое длинное",
+      "price": "0.00",
+      "quantity": 0,
+      "image": "",
+      "is_active": true
+
+  },
+  {
+      "category": 7,
+      "name": "Тест2",
+      "short_desc": "Тест кратко",
+      "desc": "Тест полное",
+      "price": "400.00",
+      "quantity": 5,
+      "image": "",
+      "is_active": true
+
+  },
+  {
+    "model": "authapp.shopuser",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$4pgaz8wwsH8hTGjAM33r1W$wxfXuFd4iFb6MYf/b1uFEZFqeSdVQOA5fKIdbVbgoaA=",
+      "last_login": "2021-07-11T19:23:32.508Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "Denis",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2021-05-14T22:06:27.480Z",
+      "avatar": "users_avatars/avatarka.jpg",
+      "age": 30,
+      "activation_key": "",
+      "activation_key_issued": "2021-06-25T14:34:34.672Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authapp.shopuser",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$cN3RKsJW6Bc0PrUxrhpWal$z58hdgLSPQ9ERX/SfMd/2zt+8njXqYNzz5QwLV026jE=",
+      "last_login": "2021-05-17T13:41:35.293Z",
+      "is_superuser": false,
+      "username": "coldy",
+      "first_name": "Den",
+      "last_name": "Kar",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2021-05-15T11:48:44Z",
+      "avatar": "",
+      "age": 27,
+      "activation_key": "",
+      "activation_key_issued": "2021-06-25T14:34:34.672Z",
+      "groups": [],
+      "user_permissions": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "authapp.shopuser",
+    "pk": 9,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$r0Ub0eSQTeoByRB3ArtYd0$VwXoaq3sBBltu/9ck/+a8cOvjC0EiDozoWdVVoBEXhU=",
+      "last_login": "2021-06-25T15:15:12.772Z",
+      "is_superuser": false,
+      "username": "test",
+      "first_name": "test",
+      "last_name": "",
+      "email": "test@gb.local",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-06-25T14:55:27.864Z",
+      "avatar": "",
+      "age": 19,
+      "activation_key": "",
+      "activation_key_issued": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authapp.shopuser",
+    "pk": 10,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$9PqCAj1ZwJ4OhpTtsrkXLO$tBWqmLtAtachGfK5yLofKjYg8DP2INndDcRH6qq8VTc=",
+      "last_login": "2021-06-25T16:24:50.289Z",
+      "is_superuser": false,
+      "username": "test2",
+      "first_name": "test2",
+      "last_name": "",
+      "email": "test2@gb.local",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-06-25T16:23:55.181Z",
+      "avatar": "",
+      "age": 56,
+      "activation_key": "",
+      "activation_key_issued": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authapp.shopuser",
+    "pk": 11,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$oWyiQN1MOFsp8w1VIzHwMG$08b6XrY5ck/1hxxD+uqoxh7BXiDWx2hGbBzmZhu6OeI=",
+      "last_login": "2021-06-25T16:43:14.049Z",
+      "is_superuser": false,
+      "username": "test3",
+      "first_name": "test3",
+      "last_name": "",
+      "email": "test3@gb.local",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-06-25T16:40:53.655Z",
+      "avatar": "",
+      "age": 23,
+      "activation_key": "",
+      "activation_key_issued": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authapp.shopuserprofile",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "tagline": "",
+      "aboutMe": "",
+      "gender": "M",
+      "photo": ""
+    }
+  },
+  {
+    "model": "authapp.shopuserprofile",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "tagline": "",
+      "aboutMe": "",
+      "gender": "",
+      "photo": ""
+    }
+  },
+  {
+    "model": "authapp.shopuserprofile",
+    "pk": 3,
+    "fields": {
+      "user": 9,
+      "tagline": "",
+      "aboutMe": "",
+      "gender": "",
+      "photo": ""
+    }
+  },
+  {
+    "model": "authapp.shopuserprofile",
+    "pk": 4,
+    "fields": {
+      "user": 10,
+      "tagline": "",
+      "aboutMe": "",
+      "gender": "",
+      "photo": ""
+    }
+  },
+  {
+    "model": "authapp.shopuserprofile",
+    "pk": 5,
+    "fields": {
+      "user": 11,
+      "tagline": "",
+      "aboutMe": "",
+      "gender": "",
+      "photo": ""
+    }
+  },
+  {
+    "model": "ordersapp.order",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "created": "2021-07-06T20:58:39.276Z",
+      "updated": "2021-07-08T22:08:24.350Z",
+      "status": "FM",
+      "is_active": false
+    }
+  },
+  {
+    "model": "ordersapp.order",
+    "pk": 2,
+    "fields": {
+      "user": 1,
+      "created": "2021-07-06T21:00:57.167Z",
+      "updated": "2021-07-06T22:25:37.005Z",
+      "status": "FM",
+      "is_active": false
+    }
+  },
+  {
+    "model": "ordersapp.order",
+    "pk": 3,
+    "fields": {
+      "user": 1,
+      "created": "2021-07-06T22:29:45.752Z",
+      "updated": "2021-07-06T22:29:53.036Z",
+      "status": "FM",
+      "is_active": false
+    }
+  },
+  {
+    "model": "ordersapp.order",
+    "pk": 4,
+    "fields": {
+      "user": 1,
+      "created": "2021-07-06T22:45:29.553Z",
+      "updated": "2021-07-06T23:12:10.785Z",
+      "status": "FM",
+      "is_active": false
+    }
+  },
+  {
+    "model": "ordersapp.order",
+    "pk": 5,
+    "fields": {
+      "user": 1,
+      "created": "2021-07-06T23:12:13.666Z",
+      "updated": "2021-07-07T17:11:28.101Z",
+      "status": "STP",
+      "is_active": true
+    }
+  },
+  {
+    "model": "ordersapp.order",
+    "pk": 6,
+    "fields": {
+      "user": 1,
+      "created": "2021-07-07T18:31:35.137Z",
+      "updated": "2021-07-07T18:37:31.526Z",
+      "status": "FM",
+      "is_active": false
+    }
+  },
+  {
+    "model": "ordersapp.order",
+    "pk": 7,
+    "fields": {
+      "user": 1,
+      "created": "2021-07-07T18:37:17.151Z",
+      "updated": "2021-07-07T18:37:29.217Z",
+      "status": "FM",
+      "is_active": false
+    }
+  },
+  {
+    "model": "ordersapp.order",
+    "pk": 8,
+    "fields": {
+      "user": 1,
+      "created": "2021-07-07T18:37:45.661Z",
+      "updated": "2021-07-07T18:38:10.213Z",
+      "status": "FM",
+      "is_active": false
+    }
+  },
+  {
+    "model": "ordersapp.order",
+    "pk": 9,
+    "fields": {
+      "user": 1,
+      "created": "2021-07-07T18:38:02.558Z",
+      "updated": "2021-07-07T18:38:08.072Z",
+      "status": "FM",
+      "is_active": false
+    }
+  },
+  {
+    "model": "ordersapp.order",
+    "pk": 10,
+    "fields": {
+      "user": 1,
+      "created": "2021-07-07T18:44:03.958Z",
+      "updated": "2021-07-07T18:52:38.920Z",
+      "status": "FM",
+      "is_active": false
+    }
+  },
+  {
+    "model": "ordersapp.order",
+    "pk": 11,
+    "fields": {
+      "user": 1,
+      "created": "2021-07-07T18:56:37.093Z",
+      "updated": "2021-07-08T22:18:31.641Z",
+      "status": "FM",
+      "is_active": false
+    }
+  },
+  {
+    "model": "ordersapp.order",
+    "pk": 12,
+    "fields": {
+      "user": 1,
+      "created": "2021-07-08T22:36:53.750Z",
+      "updated": "2021-07-08T22:36:53.879Z",
+      "status": "FM",
+      "is_active": true
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 1,
+    "fields": {
+      "order": 1,
+      "product": 4,
+      "quantity": 2
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 2,
+    "fields": {
+      "order": 1,
+      "product": 5,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 3,
+    "fields": {
+      "order": 2,
+      "product": 1,
+      "quantity": 2
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 4,
+    "fields": {
+      "order": 3,
+      "product": 2,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 5,
+    "fields": {
+      "order": 3,
+      "product": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 6,
+    "fields": {
+      "order": 3,
+      "product": 4,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 7,
+    "fields": {
+      "order": 3,
+      "product": 5,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 8,
+    "fields": {
+      "order": 3,
+      "product": 3,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 9,
+    "fields": {
+      "order": 4,
+      "product": 2,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 10,
+    "fields": {
+      "order": 4,
+      "product": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 11,
+    "fields": {
+      "order": 4,
+      "product": 4,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 12,
+    "fields": {
+      "order": 4,
+      "product": 5,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 13,
+    "fields": {
+      "order": 4,
+      "product": 3,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 14,
+    "fields": {
+      "order": 5,
+      "product": 2,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 15,
+    "fields": {
+      "order": 5,
+      "product": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 16,
+    "fields": {
+      "order": 5,
+      "product": 4,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 17,
+    "fields": {
+      "order": 5,
+      "product": 5,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 18,
+    "fields": {
+      "order": 5,
+      "product": 3,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 19,
+    "fields": {
+      "order": 6,
+      "product": 3,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 20,
+    "fields": {
+      "order": 7,
+      "product": 3,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 21,
+    "fields": {
+      "order": 8,
+      "product": 3,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 22,
+    "fields": {
+      "order": 9,
+      "product": 3,
+      "quantity": 2
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 23,
+    "fields": {
+      "order": 10,
+      "product": 3,
+      "quantity": 2
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 24,
+    "fields": {
+      "order": 11,
+      "product": 6,
+      "quantity": 2
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 25,
+    "fields": {
+      "order": 11,
+      "product": 2,
+      "quantity": 3
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 26,
+    "fields": {
+      "order": 11,
+      "product": 4,
+      "quantity": 3
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 28,
+    "fields": {
+      "order": 11,
+      "product": 2,
+      "quantity": 4
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 29,
+    "fields": {
+      "order": 11,
+      "product": 1,
+      "quantity": 12
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 30,
+    "fields": {
+      "order": 12,
+      "product": 6,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 31,
+    "fields": {
+      "order": 12,
+      "product": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 32,
+    "fields": {
+      "order": 12,
+      "product": 5,
+      "quantity": 1
+    }
+  }
+]
