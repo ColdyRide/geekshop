@@ -1,8 +1,8 @@
-{% extends 'base.html' %}
+{% extends 'geekshop/base.html' %}
 {% load static %}
 {% block menu %}
     <div class="slider">
-        {% include 'includes/inc_main_links.html' %}
+        {% include 'geekshop/includes/inc_main_links.html' %}
         <div class="text-slider">
             <h3 class="green">тенденции</h3>
             <h3 class="big">удобные стулья</h3>
@@ -15,5 +15,5 @@
     </div>
 {% endblock %}
 {% block content %}
-    {% include 'includes/inc_featured_content.html' %}
+    {% include 'geekshop/includes/inc_featured_content.html' %}
 {% endblock %}
