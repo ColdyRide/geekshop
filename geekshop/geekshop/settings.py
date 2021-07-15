@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'geekshop',
     'mainapp',
     'authapp',
     'basketapp',
@@ -71,7 +70,7 @@ ROOT_URLCONF = 'geekshop.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates/geekshop'],
+        'DIRS': ['geekshop/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
