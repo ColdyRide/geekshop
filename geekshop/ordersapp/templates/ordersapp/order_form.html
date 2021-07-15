@@ -1,4 +1,4 @@
-{% extends 'geekshop/base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 {% block js %}
 {#    <script src="https://cdnout.com/jquery.formset/jquery.formset.js"></script>#}
@@ -6,7 +6,7 @@
     <script src="{% static 'js/order_script.js' %}"></script>
 {% endblock %}
 {% block menu %}
-    {% include 'geekshop/includes/inc_main_links.html' %}
+    {% include 'includes/inc_main_links.html' %}
 {% endblock %}
 {% block content %}
     {% include 'ordersapp/includes/inc_order_summary.html' %}
