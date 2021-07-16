@@ -20,19 +20,21 @@ class Basket(models.Model):
     objects = BasketQuerySet.as_manager()
 
     @property
+    def get_positions(self):
+        return Basket.objects.filter(user=self.user)
+
+    @property
     def position_price(self):
         return self.product.price * self.quantity
 
     @property
     def total_price(self):
-        _positions = Basket.objects.filter(user=self.user)
-        _total_price = sum(list(map(lambda x: x.position_price, _positions)))
+        _total_price = sum(list(map(lambda x: x.position_price, self.get_positions)))
         return _total_price
 
     @property
     def total_amount(self):
-        _positions = Basket.objects.filter(user=self.user)
-        _total_amount = sum(list(map(lambda x: x.quantity, _positions)))
+        _total_amount = sum(list(map(lambda x: x.quantity, self.get_positions)))
         return _total_amount
 
     def delete(self, *args, **kwargs):
