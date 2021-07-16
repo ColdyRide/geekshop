@@ -4,7 +4,7 @@ from mainapp.models import ProductCategories
 def basket(request):
     basket_list = []
     if request.user.is_authenticated:
-        basket_list = request.user.basket.select_related('product')
+        basket_list = request.user.basket.select_related()
     return {
         'basket': basket_list
     }
