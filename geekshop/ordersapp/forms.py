@@ -27,7 +27,7 @@ class OrderItemForm(forms.ModelForm):
         self.fields['product'].queryset = \
             Product.objects.filter(category__is_active=True, is_active=True)\
             .exclude(quantity=0)\
-            .order_by('category', 'name')
+            .order_by('category', 'name').select_related()
         for field_name, field in self.fields.items():
             if field_name == 'product':
                 field.widget.attrs['class'] = 'form-select'

@@ -2,7 +2,6 @@ from django.db.models.signals import pre_save
 from django.dispatch import receiver
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, HttpResponseRedirect
-from django.template.loader import render_to_string
 from django.urls import reverse, reverse_lazy
 from django.db import transaction
 
@@ -74,7 +73,8 @@ class OrderCreate(FormValidMixin,AjaxMixinGet, CreateView):
         if self.request.POST:
             formset = OrderFormSet(self.request.POST)
         else:
-            basket_items = Basket.objects.filter(user=self.request.user)
+            # basket_items = Basket.objects.filter(user=self.request.user)
+            basket_items = self.request.user.basket.select_related()
             if basket_items.exists():
                 OrderFormSet = inlineformset_factory(Order, OrderItem, form=OrderItemForm, extra=len(basket_items))
                 formset = OrderFormSet()
@@ -103,7 +103,8 @@ class OrderUpdate(FormValidMixin, AjaxMixinGet, UpdateView):
         if self.request.POST:
             formset = OrderFormSet(self.request.POST, instance=self.object)
         else:
-            formset = OrderFormSet(instance=self.object)
+            queryset = self.object.orderitems.select_related()
+            formset = OrderFormSet(instance=self.object, queryset=queryset)
             for form in formset.forms:
                 if form.instance.pk:
                     form.initial['price'] = form.instance.product.price
