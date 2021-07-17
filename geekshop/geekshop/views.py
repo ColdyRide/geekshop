@@ -7,7 +7,7 @@ def main(request):
 
     context = {
         'title': title,
-        'products': Product.objects.all()[:3],
+        'products': Product.objects.filter(is_active=True)[:3],
     }
     return render(request, 'index.html', context)
 
