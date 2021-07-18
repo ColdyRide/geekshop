@@ -3,7 +3,7 @@ $( document ).on( 'click', '.details a', function(event) {
            $.ajax({
                url: event.target.href,
                success: function (data) {
-                   $('.products_list').html(data.result);
+                   $('.details').html(data.result);
                },
            });
 
