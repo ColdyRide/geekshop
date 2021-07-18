@@ -22,9 +22,8 @@ class Basket(models.Model):
     objects = BasketQuerySet.as_manager()
 
     @cached_property
-    @property
     def get_positions(self):
-        return Basket.objects.filter(user=self.user)
+        return self.user.basket.select_related()
 
     @property
     def position_price(self):
