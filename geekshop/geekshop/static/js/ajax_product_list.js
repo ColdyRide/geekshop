@@ -1,7 +1,7 @@
 $( document ).on( 'click', '.details a', function(event) {
    if (event.target.hasAttribute('href')) {
-            console.log(event.target.href)
            $.ajax({
+               url: event.target.href,
                success: function (data) {
                    $('.products_list').html(data.result);
                },
