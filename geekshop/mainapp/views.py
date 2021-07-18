@@ -112,7 +112,7 @@ class ProductsView(ListView):
         if 'product' in context.keys():
             self.template_name = 'mainapp/products.html'
         if self.request.is_ajax():
-            result = render_to_string('mainapp/includes/inc_cat_products_list.html', context)
+            result = render_to_string('mainapp/includes/inc_cat_products_list.html', context, request=request)
             return JsonResponse({'result': result})
         return self.render_to_response(context)
 
