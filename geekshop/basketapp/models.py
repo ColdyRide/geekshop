@@ -1,4 +1,6 @@
 from django.db import models
+from django.utils.functional import cached_property
+
 from geekshop import settings
 from mainapp.models import Product
 
@@ -19,6 +21,7 @@ class Basket(models.Model):
     add_datetime = models.DateTimeField(verbose_name='время', auto_now_add=True)
     objects = BasketQuerySet.as_manager()
 
+    @cached_property
     @property
     def get_positions(self):
         return Basket.objects.filter(user=self.user)
