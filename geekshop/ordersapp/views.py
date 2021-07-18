@@ -60,7 +60,7 @@ class OrderList(ListView):
         return Order.objects.filter(user=self.request.user)
 
 
-class OrderCreate(FormValidMixin,AjaxMixinGet, CreateView):
+class OrderCreate(FormValidMixin, AjaxMixinGet, CreateView):
     model = Order
     fields = []
     success_url = reverse_lazy('ordersapp:order_list')
@@ -73,7 +73,6 @@ class OrderCreate(FormValidMixin,AjaxMixinGet, CreateView):
         if self.request.POST:
             formset = OrderFormSet(self.request.POST)
         else:
-            # basket_items = Basket.objects.filter(user=self.request.user)
             basket_items = self.request.user.basket.select_related()
             if basket_items.exists():
                 OrderFormSet = inlineformset_factory(Order, OrderItem, form=OrderItemForm, extra=len(basket_items))
