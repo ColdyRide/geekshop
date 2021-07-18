@@ -1,6 +1,8 @@
 import random
 
+from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404
+from django.template.loader import render_to_string
 from django.views.generic import ListView
 
 from .models import ProductCategories, Product
@@ -109,6 +111,9 @@ class ProductsView(ListView):
         context = self.get_context_data(**kwargs)
         if 'product' in context.keys():
             self.template_name = 'mainapp/products.html'
+        if self.request.is_ajax():
+            result = render_to_string('mainapp/includes/inc_cat_products_list.html', context)
+            return JsonResponse({'result': result})
         return self.render_to_response(context)
 
 
