@@ -4,6 +4,7 @@ $( document ).on( 'click', '.details a', function(event) {
                url: event.target.href,
                success: function (data) {
                    $('.details').html(data.result);
+                   window.location.reload()
                },
            });
 
