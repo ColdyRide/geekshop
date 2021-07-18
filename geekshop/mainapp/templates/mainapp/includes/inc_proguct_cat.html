@@ -1,10 +1,9 @@
 <ul class="links-menu">
     {% for category in categories %}
         {% if category.is_active %}
-
             {% if category.id == request.resolver_match.kwargs.pk and request.resolver_match.url_name != 'details'%}
                 <li><a href="{% url 'products:category' category.id %}" class="active">{{ category.name }}</a></li>
-            {% elif request.resolver_match.url_name == 'details' and category.id == product.category__id %}
+            {% elif request.resolver_match.url_name == 'details' and category.id == product.category.id %}
                 <li><a href="{% url 'products:category' category.id %}" class="active">{{ category.name }}</a></li>
             {% else %}
                 <li><a href="{% url 'products:category' category.id %}">{{ category.name }}</a></li>
