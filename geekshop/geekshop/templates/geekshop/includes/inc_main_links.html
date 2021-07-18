@@ -38,9 +38,11 @@
     <div class="basket-container">
         <a href="#" class="search"></a>
         {% if basket %}
-            <a href="{% url 'basket:view' %}" class="basket">
-                <span>{{ basket.0.total_price|floatformat:0 }} руб ({{ basket.0.total_amount }} шт.)</span>
-            </a>
+            {% with object = basket.0.get_summary %}
+                <a href="{% url 'basket:view' %}" class="basket">
+                    <span>{{ object.total_price|floatformat:0 }} руб ({{ object.total_amount }} шт.)</span>
+                </a>
+            {% endwith %}
         {% endif %}
     </div>
 

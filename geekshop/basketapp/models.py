@@ -30,14 +30,20 @@ class Basket(models.Model):
         return self.product.price * self.quantity
 
     @property
-    def total_price(self):
-        _total_price = sum(list(map(lambda x: x.position_price, self.get_positions)))
-        return _total_price
+    def get_summary(self):
+        _items = self.get_positions
+        return {'total_price': sum(list(map(lambda x: x.position_price, self.get_positions))),
+                'total_amount ': sum(list(map(lambda x: x.quantity, self.get_positions)))}
 
-    @property
-    def total_amount(self):
-        _total_amount = sum(list(map(lambda x: x.quantity, self.get_positions)))
-        return _total_amount
+    # @property
+    # def total_price(self):
+    #     _total_price = sum(list(map(lambda x: x.position_price, self.get_positions)))
+    #     return _total_price
+    #
+    # @property
+    # def total_amount(self):
+    #     _total_amount = sum(list(map(lambda x: x.quantity, self.get_positions)))
+    #     return _total_amount
 
     def delete(self, *args, **kwargs):
         self.product.quantity += self.quantity
