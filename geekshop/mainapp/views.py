@@ -15,11 +15,11 @@ def get_products():
         products = cache.get(key)
         if products is None:
             products = \
-                Product.objects.all().exclude(category__is_active=False, is_active=False).select_related('category')
+                Product.objects.all().exclude(category__is_active=False, is_active=False)
             cache.set(key, products)
         return products
     else:
-        return Product.objects.all().exclude(category__is_active=False, is_active=False).select_related('category')
+        return Product.objects.all().exclude(category__is_active=False, is_active=False)
 
 
 def get_product(pk):
