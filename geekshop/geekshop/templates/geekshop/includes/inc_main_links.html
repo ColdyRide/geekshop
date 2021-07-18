@@ -40,7 +40,7 @@
         {% if basket %}
             {% with object_summary=basket.0.get_summary %}
                 <a href="{% url 'basket:view' %}" class="basket">
-                    <span>{{ object.total_price|floatformat:0 }} руб ({{ object.total_amount }} шт.)</span>
+                    <span>{{ object_summary.total_price|floatformat:0 }} руб ({{ object_summary.total_amount }} шт.)</span>
                 </a>
             {% endwith %}
         {% endif %}
