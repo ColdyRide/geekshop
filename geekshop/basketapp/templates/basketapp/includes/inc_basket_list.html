@@ -4,8 +4,8 @@
             <table class="table table-bordered table-hover text-center">
                 <caption>
                     {% with object_summary=basket.0.get_summary %}
-                        В корзине {{ basket.total_amount }} товаров общей стоимостью
-                        {{ basket.total_price }} руб
+                        В корзине {{ object_summary.total_amount }} товаров общей стоимостью
+                        {{ object_summary.total_price }} руб
                     {% endwith %}
                 </caption>
                 <thead class="table-dark">
