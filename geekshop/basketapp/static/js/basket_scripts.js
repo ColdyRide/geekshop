@@ -7,7 +7,7 @@ window.onload = function () {
             success: function (data) {
                 $('.basket_list').html(data.result);
                 $('.header clearfix').html(data.main_links)
-                window.location.reload()
+                // window.location.reload()
             },
         });
 
