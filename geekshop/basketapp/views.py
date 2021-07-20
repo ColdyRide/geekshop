@@ -63,6 +63,7 @@ def basket_edit(request, pk, quantity):
         # Was added for properly work of ajax basket edition (looks like context_processor for basket ignore this)
         context = cont_basket(request)
         # --------
-        result = render_to_string('basketapp/includes/inc_basket_list.html', context)
+        result = render_to_string('basketapp/includes/inc_basket_list.html')
+        main_links = render_to_string('includes/inc_main_links.html', context)
 
-        return JsonResponse({'result': result})
+        return JsonResponse({'result': result, 'main_links': main_links})
