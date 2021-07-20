@@ -7,6 +7,7 @@ from django.urls import reverse
 from basketapp.models import Basket
 from mainapp.models import Product
 from mainapp.context_processors import basket as cont_basket
+from geekshop.context_processors import main_links as cont_main_links
 
 
 @login_required
@@ -62,8 +63,9 @@ def basket_edit(request, pk, quantity):
 
         # Was added for properly work of ajax basket edition (looks like context_processor for basket ignore this)
         context = cont_basket(request)
+        context.update(cont_main_links(request))
         # --------
-        result = render_to_string('basketapp/includes/inc_basket_list.html', context)
+        result = render_to_string('basketapp/includes/inc_basket_list.html', cont_basket(request))
         main_links = render_to_string('includes/inc_main_links.html', context)
 
         return JsonResponse({'result': result, 'main_links': main_links})
