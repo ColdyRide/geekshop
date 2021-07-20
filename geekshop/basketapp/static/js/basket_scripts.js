@@ -5,6 +5,7 @@ window.onload = function () {
         $.ajax({
             url: "/basket/edit/" + t_href.name + "/" + t_href.value + "/",
             success: function (data) {
+                console.log(data.main_links)
                 $('.basket_list').html(data.result);
                 $('.header clearfix').html(data.main_links)
                 // window.location.reload()
