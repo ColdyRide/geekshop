@@ -33,7 +33,7 @@ class Basket(models.Model):
     def get_summary(self):
         _items = self.get_positions
         return {'total_price': sum(list(map(lambda x: x.position_price, _items))),
-                'total_amount ': sum(list(map(lambda x: x.quantity, _items)))}
+                'total_amount': sum(list(map(lambda x: x.quantity, _items)))}
 
     def delete(self, *args, **kwargs):
         self.product.quantity += self.quantity
